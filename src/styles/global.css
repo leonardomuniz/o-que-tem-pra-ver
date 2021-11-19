@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+	justify-content: space-between;
+	width: 100%;
+}
+.navbar a {
+	color: #171717;
+	text-decoration: none;
+}
+
+.logo {
+	margin: 20px 15px;
+}
+
+.nav-links {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 10px 0;
+}
+
+.nav-links li {
+	margin: 0 25px;
+}
+
+.home-article {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-left: 4em;
+}
+
+.home-article div:nth-child(1) {
+	margin-top: 20px;
+}
+.home-article div:nth-child(2) {
+	margin-bottom: 15%;
+	margin-top: auto;
+}
+.home-article h1 {
+	color: #171717;
+	font-size: 35px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.home-article p {
+	color: #424242;
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+
+.home-title {
+    color: #171717;
+	font-size: 35px;
+	font-weight: bold;
+    margin-left: 4%;
+    margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+
+
+
+.movie-card .top {
+    margin-top: 20px;
+}
+
+.movie-card .text {
+    margin-bottom: 15%;
+	margin-top: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.movie-card .text h1 {font-size:20px; color: #fff; text-shadow: 2px 3px 4px #000000;}
+.movie-card .text h2 {font-size:15px; color: #fff; text-shadow: 2px 3px 4px #000000;}
