@@ -69,3 +69,11 @@ export interface Movie {
     vote_average: number;
     vote_count: number;
 }
+
+
+export interface SearchForm {
+    language: string;
+    search_for: string;
+    vote_average: number;
+    genre: string[];
+}
