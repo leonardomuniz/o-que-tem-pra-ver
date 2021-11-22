@@ -93,7 +93,6 @@ body {
 	width: 100%;
 	border-radius: 10px;
 	height: 350px;
-	margin: 0;
 	-webkit-box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.54);
 	box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.54);
 }
