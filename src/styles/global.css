@@ -11,18 +11,16 @@ body {
 	padding: 0;
 }
 
+
 .navbar {
-	height: 60px;
-	width: 100%;
-	background-color: #171717;
-}
-.navbar a {
 	color: #fff;
-	margin: auto 15px;
 	font-weight: bolder;
 }
+.navbar a {
+	margin: auto 15px;
+}
 .navbar div {
-	margin: 10px auto
+	margin: 10px auto;
 }
 
 
@@ -37,47 +35,56 @@ body {
 	margin-top: 20px;
 }
 .home-article div:nth-child(2) {
-	margin-bottom: 15%;
+	margin-bottom: 5%;
 	margin-top: auto;
 }
 .home-article h1 {
-	color: #171717;
 	font-size: 35px;
 	font-weight: bold;
+	margin-bottom: 15px;
 	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 2px 3px 4px #000000;
+}
+.home-article p {
+	font-size: 15px;
+	margin-bottom: 15px;
+	color: #fff;
+	text-shadow: 2px 3px 4px #000000;
 }
 
-.home-article p {
-	color: #424242;
-	font-size: 25px;
-	margin-bottom: 15px;
-}
+
 
 .home-title {
 	color: #171717;
 	font-size: 35px;
 	font-weight: bold;
 	margin-left: 4%;
-	margin-bottom: 15px;
+	margin: 20px 4%;
 	text-transform: uppercase;
 }
 
-.movie-card {margin: 5px 5px;}
+.movie-card {
+	margin: 5px 5px;
+}
+
+.movie-card a div {
+	box-shadow: -1px 5px 15px 5px rgba(23,23,23,0.32);
+}
 
 .movie-card .text {
 	text-align: center;
 	font-weight: bold;
+	color: #171717;
 }
 
 .movie-card .text h1 {
+	margin-top: 20px;
 	font-size: 20px;
-	color: #fff;
-	text-shadow: 2px 3px 4px #000000;
+
 }
 .movie-card .text h2 {
 	font-size: 15px;
-	color: #fff;
-	text-shadow: 2px 3px 4px #000000;
 }
 
 .movie-poster {
@@ -87,8 +94,8 @@ body {
 	border-radius: 10px;
 	height: 350px;
 	margin: 0;
-	-webkit-box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.54); 
-	box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.54);
+	-webkit-box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.54);
+	box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.54);
 }
 
 .movie-image {
@@ -106,7 +113,7 @@ body {
 
 .movie-image .movie-title span {
 	color: #d1d1d1;
-	font-size: 30px
+	font-size: 30px;
 }
 
 .movie-image .movie-tagline {
@@ -120,7 +127,6 @@ body {
 }
 
 .movie-image .movie-overview {
-
 	font-size: 20px;
 	text-shadow: 2px 3px 4px #212121;
 }

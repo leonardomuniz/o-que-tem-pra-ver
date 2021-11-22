@@ -10,13 +10,13 @@ export default function NavBarComponent() {
     return (
         <>
             {variant === 'small' || variant === 'base' ? (
-                <Flex className="navbar" fontSize={'120%'} >
+                <Flex className="navbar" fontSize={'120%'} w='100%' h='60px' bg='#171717' >
                     <Box style={{marginTop:15}}>
                         <Link to="/">Home</Link>
                     </Box>
                 </Flex>
             ) : (
-                <Flex className="navbar" fontSize={'120%'}>
+                <Flex className="navbar" fontSize={'120%'} w='100%' h='60px' bg='#171717' >
                     <Box style={{marginTop:15}}>
                         <Link to="/">Home</Link>
                     </Box>
