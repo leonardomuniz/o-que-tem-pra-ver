@@ -4,6 +4,7 @@ import { Box, GridItem, Flex, Grid, Container, Center, Text, Tag, Spinner } from
 import { StarIcon } from '@chakra-ui/icons';
 
 import NavBarComponent from '../components/NavBarComponent';
+import Film from '../components/Film';
 import { Movie, Movies, Genre } from '../helpers/Interfaces';
 import { api, key, imgUrl } from '../services/api';
 
@@ -13,6 +14,7 @@ export default function Films() {
     const [movie, setMovie] = useState<Movie>();
     const [genres, setGenres] = useState<Genre[]>([{ "id": 28, "name": "Ação" }]);
     const [similar, setSimilar] = useState<Movies[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
         (async () => {
@@ -21,8 +23,9 @@ export default function Films() {
 
             setMovie(data);
             setGenres(data.genres);
+            setIsLoading(false);
         })();
-    }, [movie]);
+    }, [moviesId]);
 
     useEffect(() => {
         (async () => {
@@ -31,9 +34,9 @@ export default function Films() {
             genresList = genresList.replace(',', '');
             genresList = genresList.replace(',', '');
             genresList = genresList.slice(0, genresList.length - 3);
-        
+
             const { data } = await api
-                .get(`discover/movie?api_key=${key}&language=pt-BR&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_genres=${genresList}&with_watch_monetization_types=flatrate`)
+                .get(`discover/movie?api_key=${key}&language=pt-BR&sort_by=popularity.desc&include_adult=true&page=1&with_genres=${genresList}`)
 
             setSimilar(data.results);
         })();
@@ -46,7 +49,7 @@ export default function Films() {
             {movie && (
                 <section>
                     <Box className="movie-image" style={{ backgroundImage: `url(${imgUrl}${movie.backdrop_path})` }}>
-                        <Container maxW="container.lg">
+                        <Container maxW="container.lg" >
                             <Grid
                                 templateRows="repeat(2, 1fr)"
                                 templateColumns="repeat(4, 1fr)"
@@ -85,14 +88,14 @@ export default function Films() {
                         <Text className="movie-options">Também veja:</Text>
                     </Container>
                     <Flex direction={'row'} wrap={'wrap'} style={{ marginLeft: '2%' }}>
-                        {similar === [] ? <Spinner /> : similar.map(movie => (
-                            <Box className="movie-card text">
-                                <Link to={`${movie.id}`} style={{ backgroundImage: `url(${imgUrl}${movie.poster_path})` }} />
-                                <div className="text">
-                                    <h1>{movie.title}</h1>
-                                    <h2><StarIcon color="yellow" style={{ marginBottom: 5 }} /> {movie.vote_average} de {movie.vote_count} votos</h2>
-                                </div>
-                            </Box>
+                        {isLoading ? <Spinner size="xl" /> : similar.map(similar => (
+                            <Film
+                                movieTitle={similar.title}
+                                moviePoster={similar.poster_path}
+                                movieVoteAverage={similar.vote_average}
+                                movieVoteCount={similar.vote_count}
+                                movieLink={`${similar.id}`}
+                            />
                         ))}
                     </Flex>
                 </section>

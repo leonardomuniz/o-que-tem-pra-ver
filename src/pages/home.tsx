@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Button, Grid, GridItem, Flex, Spinner, Box } from "@chakra-ui/react";
-import { StarIcon } from '@chakra-ui/icons';
 
-import { api, key, imgUrl } from '../services/api';
 import NavBarComponent from '../components/NavBarComponent';
+import Film from '../components/Film';
+import { api, key } from '../services/api';
 import { Movies } from '../helpers/Interfaces';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
         (async () => {
             const { data } = await api
-                .get(`discover/movie?api_key=${key}&language=pt-BR&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_watch_monetization_types=flatrate`)
+                .get(`discover/movie?api_key=${key}&language=pt-BR&sort_by=popularity.desc&include_adult=true`)
 
             setMovies(data.results);
             
@@ -46,14 +46,14 @@ export default function Home() {
             </Grid>
             <p className="home-title">Mais populares</p>
             <Flex direction={'row'} wrap={'wrap'} style={{ marginLeft: '2%' }}>
-                {isLoading ? <Spinner  size="xl" /> : movies.map(movie => (
-                    <Box  className="movie-card text">
-                    <Link to={`movies/${movie.id}`} style={{ backgroundImage: `url(${imgUrl}${movie.poster_path})` }}/>
-                        <div className="text">
-                            <h1>{movie.title}</h1>
-                            <h2><StarIcon color="yellow" style={{ marginBottom: 5 }} /> {movie.vote_average} de {movie.vote_count} votos</h2>
-                        </div>
-                    </Box>
+                {isLoading ? <Spinner  size="xl" /> : movies.map(movie => ( 
+                    <Film 
+                        movieTitle={movie.title} 
+                        moviePoster={movie.poster_path}
+                        movieVoteAverage={movie.vote_average}
+                        movieVoteCount={movie.vote_count}
+                        movieLink={`movies/${movie.id}`}
+                    />
                 ))}
             </Flex>
         </section >
