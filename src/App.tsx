@@ -9,6 +9,7 @@ import GenreList from './pages/genreList';
 import './styles/global.css'
 
 function App() {
+  document.title = 'O que tem pra ver ?';
   return (
       <Routes>
         <Route path="/" element={<Home />} />
