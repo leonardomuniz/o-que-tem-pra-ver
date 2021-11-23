@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import { Button, Grid, GridItem, Flex, Spinner } from "@chakra-ui/react";
+import { Button, Grid, GridItem, Flex, Spinner, Box } from "@chakra-ui/react";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Film from '../components/Film';
@@ -37,7 +37,7 @@ export default function Home() {
 
 
     return (
-        <section className="background-gradient">
+        <Box   bg={'#171717'} color="white">
             <NavBarComponent />
             {movie && (
                 <Grid
@@ -79,6 +79,6 @@ export default function Home() {
                 ))}
             </Flex>
             <Footer />
-        </section >
+        </Box >
     );
 } 

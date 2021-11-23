@@ -32,7 +32,7 @@ export default function Film({
             </Box>
             </Link>
 
-            <div className="text">
+            <div className="text" style={{color: '#fff'}}> 
                 <h1>{movieTitle}</h1>
                 <h2><StarIcon color="yellow" style={{ marginBottom: 5 }} /> {movieVoteAverage} de {movieVoteCount} </h2>
             </div>

@@ -48,7 +48,7 @@ export default function Search() {
     }
 
     return (
-        <div>
+        <Box  bg={'#171717'} color="white">
             <NavBarComponent />
             <Box h={'50px'} />
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -120,6 +120,6 @@ export default function Search() {
                 </Container>
             </form>
             <Footer />
-        </div>
+        </Box>
     );
 }

@@ -33,6 +33,7 @@ export default function Films() {
 
     useEffect(() => {
         (async () => {
+            setIsLoading(true);
             let genresList: any = genres.map(genre => `${genre.id}%20`);
             genresList = genresList.toString();
             genresList = genresList.replace(',', '');
@@ -43,12 +44,13 @@ export default function Films() {
                 .get(`discover/movie?api_key=${key}&language=pt-BR&sort_by=popularity.desc&include_adult=true&page=1&with_genres=${genresList}`)
 
             setSimilar(data.results);
+            setIsLoading(false)
         })();
-    }, [movie]);
+    }, [genres]);
 
 
     return (
-        <div>
+        <Box  bg={'#171717'} color="white">
             <NavBarComponent />
             {variant === 'medium' || variant === 'small' || variant === 'base' ? (
                 <>
@@ -146,10 +148,11 @@ export default function Films() {
                         movieVoteCount={similar.vote_count}
                         movieLink={`${similar.id}`}
                         movieDescription={similar.overview}
+                        
                     />
                 ))}
             </Flex>
             <Footer />
-        </div>
+        </Box>
     );
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Center, Text, Flex, Spinner } from "@chakra-ui/react";
+import { Center, Text, Flex, Spinner, Box } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 
 import NavBarComponent from '../components/NavBarComponent';
@@ -26,7 +26,7 @@ export default function MovieList() {
         })();
     }, [searchParams]);
     return (
-        <>
+        <Box   bg={'#171717'} color="white">
             <NavBarComponent />
             <Center>
                 <Text fontSize="4xl" style={{ fontWeight: 'bold', marginTop: 30, marginBottom: 30 }}>Resultado da pesquisa:</Text>
@@ -45,6 +45,6 @@ export default function MovieList() {
                 ))}
             </Flex>
             <Footer />
-        </>
+        </Box>
     )
 }

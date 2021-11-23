@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, Text, Flex } from "@chakra-ui/react";
+import { Center, Text, Flex, Box } from "@chakra-ui/react";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Genre from '../components/Genre';
@@ -8,7 +8,7 @@ import { GenreNames } from '../helpers/GenreList'
 
 export default function GenreList() {
     return (
-        <>
+        <Box   bg={'#171717'} color="white">
             <NavBarComponent />
             <Center>
                 <Text fontSize="4xl" style={{ fontWeight: 'bold', marginTop: 30, marginBottom: 30 }}>Lista de Gêneros</Text>
@@ -26,6 +26,6 @@ export default function GenreList() {
                 ))}
             </Flex>
             <Footer />
-        </>
+        </Box>
     )
 }
