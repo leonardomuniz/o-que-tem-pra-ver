@@ -9,12 +9,9 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #171717;
 }
 
-.background-gradient {
-	background-image: linear-gradient(to right top, #171717, #1f1f1f, #272727, #2f2f2f, #383838);
-	color: #fff
-}
 .navbar {
 	color: #fff;
 	font-weight: bolder;

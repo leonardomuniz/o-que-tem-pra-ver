@@ -16,18 +16,18 @@ export default function Film({
 }: any) {
 
     return (
-        <Box className="movie-card" w={['100%', '47.5%', '31.5%', '19%']}>
+        <Box className="movie-card" w={['100%', '47.5%', '31.5%', '24%' ,'19%']}>
             <Link to={movieLink}>
                 <Box
                     w='100%'
-                    h={[650, 375, 450, 350]}
+                    h={[650, 500, 450, 400,350]}
                     style={{
                         backgroundImage: `url(${imgUrl}${moviePoster})`,
                         backgroundSize: 'cover',
                         borderRadius: 10,
                     }}
                 />
-            <Box className="overlay blur" h={[650, 375, 450, 350]}>
+            <Box className="overlay blur" h={[650, 500, 450, 400,350]}>
                 <h2>{movieDescription}</h2>
             </Box>
             </Link>
