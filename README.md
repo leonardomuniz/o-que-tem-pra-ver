@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+<div align="center">
+  <img alt="Logo" src="./public/logo.ico">
+    <h2>O que tem pra ver ?!</h2>
+</div>
+<br>
+<p align="center">Este é o site na qual você pode achar uma variedade de filmes baseados no que você já gosta</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+<div align="center" >
+  <img src="./public/site_preview.gif"height="325">
+</div>
+<br>
 
-## Available Scripts
+## 📄 **Sobre este projeto**
 
-In the project directory, you can run:
+Este site tem como seu objetivo principal de ser um catalogo de filmes, com resumos e notas sobre filmes para ajudar a qualquer um que esteja na busca de algum filme para assistir mas não sabe necessariamente qual é. Também tem a função de ser útil para aqueles que gostam muito de um gênero de filme e gostariam de ver mais filmes sobre.
 
-### `yarn start`
+Com a ferramenta de busca presente no site qualquer um consegue buscar de forma fácil um filme no seu site de streaming fávorito.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+---
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## 🚀 Tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/en/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [chakra](https://chakra-ui.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TypeORM](https://typeorm.io/#/)
+- [react](https://pt-br.reactjs.org/)
+- [axios](https://github.com/axios/axios)
+- [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
+- [react-hook-forms](https://react-hook-form.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔨 Configuração
 
-### `yarn eject`
+1- Para instalar as dependências:
+> yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2- Para iniciar a aplicação:
+> yarn start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Feito com 💜 por LEONARDO M. 👋 [veja meu linkedin](https://www.linkedin.com/in/leonardo-muniz-a39984144/)
+<br>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

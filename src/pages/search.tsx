@@ -57,7 +57,7 @@ export default function Search() {
                     <br />
                     <FormControl id="language">
                         <FormLabel>Idioma</FormLabel>
-                        <Select placeholder="Selecione um idioma" {...register("language")}>
+                        <Select  color="#171717" placeholder="Selecione um idioma" {...register("language")}>
                             <option value="&language=pt-BR">Português</option>
                             <option value="&language=en-US">Inglês</option>
                             <option value="&language=es-ES">Espanhol</option>
@@ -66,7 +66,7 @@ export default function Search() {
                     <br />
                     <FormControl id="Search-for">
                         <FormLabel>Buscar por</FormLabel>
-                        <Select placeholder="busca" {...register("search_for")}>
+                        <Select  color="#171717"  placeholder="busca" {...register("search_for")}>
                             <option value="&sort_by=popularity.desc">Mais popular para o menos popular</option>
                             <option value="&sort_by=popularity.asc">Menos popular para o mais popular</option>
                             <option value="&sort_by=release_date.desc">Filmes mais novos</option>
