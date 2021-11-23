@@ -3,6 +3,7 @@ import { Center, Text, Flex } from "@chakra-ui/react";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Genre from '../components/Genre';
+import Footer from '../components/Footer';
 import { GenreNames } from '../helpers/GenreList'
 
 export default function GenreList() {
@@ -24,6 +25,7 @@ export default function GenreList() {
                     />
                 ))}
             </Flex>
+            <Footer />
         </>
     )
 }

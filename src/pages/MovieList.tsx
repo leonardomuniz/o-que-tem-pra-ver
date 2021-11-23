@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Film from '../components/Film';
+import Footer from '../components/Footer';
 import { Movies } from '../helpers/Interfaces';
 import { api, key } from '../services/api';
 
@@ -43,6 +44,7 @@ export default function MovieList() {
                     />
                 ))}
             </Flex>
+            <Footer />
         </>
     )
 }

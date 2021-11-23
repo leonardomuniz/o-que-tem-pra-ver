@@ -4,6 +4,7 @@ import { Button, Grid, GridItem, Flex, Spinner } from "@chakra-ui/react";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Film from '../components/Film';
+import Footer from '../components/Footer';
 import { api, key, imgUrl } from '../services/api';
 import { Movies, Movie } from '../helpers/Interfaces';
 import { InfoIcon } from '@chakra-ui/icons'
@@ -77,6 +78,7 @@ export default function Home() {
                     />
                 ))}
             </Flex>
+            <Footer />
         </section >
     );
 } 

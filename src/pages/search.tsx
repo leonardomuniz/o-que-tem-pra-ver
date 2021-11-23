@@ -18,6 +18,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Search2Icon } from '@chakra-ui/icons';
 
 import NavBarComponent from '../components/NavBarComponent';
+import Footer from '../components/Footer';
 import { SearchForm } from '../helpers/Interfaces';
 
 
@@ -118,6 +119,7 @@ export default function Search() {
                     </Center>
                 </Container>
             </form>
+            <Footer />
         </div>
     );
 }

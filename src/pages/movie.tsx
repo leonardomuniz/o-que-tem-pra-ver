@@ -6,6 +6,7 @@ import { useBreakpointValue } from "@chakra-ui/react";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Film from '../components/Film';
+import Footer from '../components/Footer';
 import { Movie, Movies, Genre } from '../helpers/Interfaces';
 import { api, key, imgUrl } from '../services/api';
 
@@ -148,7 +149,7 @@ export default function Films() {
                     />
                 ))}
             </Flex>
-
+            <Footer />
         </div>
     );
 }
