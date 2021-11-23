@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Box, Flex, Spacer } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useBreakpointValue } from "@chakra-ui/react"
@@ -23,7 +23,7 @@ export default function NavBarComponent() {
                     <Spacer />
                     <Box style={{marginTop:15}} >
                         <Link to="/search" >Pesquisa avançada</Link>
-                        <Link to="/search" >Gêneros</Link>
+                        <Link to="/genres" >Gêneros</Link>
                     </Box>
                 </Flex>
             )}

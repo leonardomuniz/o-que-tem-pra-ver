@@ -74,6 +74,6 @@ export interface Movie {
 export interface SearchForm {
     language: string;
     search_for: string;
-    vote_average: number;
+    year: number;
     genre: string[];
 }
