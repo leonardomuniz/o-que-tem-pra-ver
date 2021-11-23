@@ -66,6 +66,7 @@ body {
 
 .movie-card {
 	margin: 5px 5px;
+	position: relative;
 }
 
 .movie-card a div {
@@ -86,6 +87,42 @@ body {
 .movie-card .text h2 {
 	font-size: 15px;
 }
+
+.movie-card .overlay {
+	position:absolute;
+	color: #fff;
+	top: 0;
+	left: 0;
+	width:100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 16px;
+	text-shadow: 2px 3px 4px #000000;
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+.movie-card .overlay > * {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}  
+.movie-card .overlay:hover {
+	opacity: 1
+}
+
+.movie-card .blur {
+	backdrop-filter: blur(5px);
+}
+
+.movie-card .overlay:hover > * {
+	transform: translateY(0px);
+}
+
 
 .movie-poster {
 	background-size: cover;

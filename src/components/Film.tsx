@@ -6,7 +6,14 @@ import { StarIcon } from '@chakra-ui/icons';
 
 import { imgUrl } from '../services/api';
 
-export default function Film({ movieTitle, moviePoster, movieVoteAverage, movieVoteCount, movieLink }: any) {
+export default function Film({
+    movieTitle,
+    moviePoster,
+    movieVoteAverage,
+    movieVoteCount,
+    movieLink,
+    movieDescription
+}: any) {
 
     return (
         <Box className="movie-card" w={['100%', '47.5%', '31.5%', '19%']}>
@@ -20,6 +27,9 @@ export default function Film({ movieTitle, moviePoster, movieVoteAverage, movieV
                         borderRadius: 10,
                     }}
                 />
+            <Box className="overlay blur" h={[650, 375, 450, 350]}>
+                <h2>{movieDescription}</h2>
+            </Box>
             </Link>
 
             <div className="text">

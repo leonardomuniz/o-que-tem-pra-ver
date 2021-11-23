@@ -3,7 +3,7 @@ import { Center, Text, Flex } from "@chakra-ui/react";
 
 import NavBarComponent from '../components/NavBarComponent';
 import Genre from '../components/Genre';
-import {GenreNames} from '../helpers/GenreList'
+import { GenreNames } from '../helpers/GenreList'
 
 export default function GenreList() {
     return (
@@ -15,7 +15,8 @@ export default function GenreList() {
             <br />
             <Flex direction={'row'} wrap={'wrap'} style={{ marginLeft: '2%' }}>
                 {GenreNames.map(genre => (
-                    <Genre 
+                    <Genre
+                        key={genre.id}
                         genreName={genre.name}
                         genreColor={genre.color}
                         genreText={genre.text}

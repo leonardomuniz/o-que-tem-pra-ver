@@ -144,6 +144,7 @@ export default function Films() {
                         movieVoteAverage={similar.vote_average}
                         movieVoteCount={similar.vote_count}
                         movieLink={`${similar.id}`}
+                        movieDescription={similar.overview}
                     />
                 ))}
             </Flex>

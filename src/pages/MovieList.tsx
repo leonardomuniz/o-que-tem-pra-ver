@@ -39,6 +39,7 @@ export default function MovieList() {
                         movieVoteAverage={movie.vote_average}
                         movieVoteCount={movie.vote_count}
                         movieLink={`/movies/${movie.id}`}
+                        movieDescription={movie.overview}
                     />
                 ))}
             </Flex>
